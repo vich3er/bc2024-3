@@ -22,12 +22,12 @@ program
             const data = fs.readFileSync(options.input, 'utf8');
             jsonData = JSON.parse(data);
         } catch (err) {
-            console.error('Cannot find input file or error parsing JSON data');
+            console.error('Cannot find input file');
             process.exit(1);
         }
 
 
-        console.log('Прочитані дані:', jsonData);
+        // console.log('Прочитані дані:', jsonData);
 
 
         const filteredValues = jsonData.filter(item => {
