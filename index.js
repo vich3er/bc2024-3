@@ -33,18 +33,18 @@ program
         const filteredValues = jsonData.filter(item => {
             const kuValue = Number(item.ku);
             const value = Number(item.value);
-            // return kuValue === 13 && value < 5;
+            // return kuValue === 13 && value <5;
             return kuValue===13 && value>5;
         }).map(item => item.value);
 
 
-        if (options.display) {
-            if (filteredValues.length === 0) {
-                console.log('No matching values found.');
-            } else {
-                filteredValues.forEach(value => console.log(value));
-            }
-        }
+        // if (options.display) {
+        //     if (filteredValues.length === 0) {
+        //         console.log('No matching values found.');
+        //     } else {
+        //         filteredValues.forEach(value => console.log(value));
+        //     }
+        // }
 
 
         if (options.output) {
